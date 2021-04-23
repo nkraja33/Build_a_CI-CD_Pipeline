@@ -63,40 +63,115 @@ make all
  if all dependencies were installed and if there is no syntax error in your code you will get an output similar to this.
 ![scaffolding.JPG](screenshots/scaffolding.JPG) 
 
-### 2. 
+### 2. Test application locally.
+
+ a. Run the below command to start the applciation locally.
+
+```
+python app.py
+```
+![app_local_start.JPG](screenshots/app_local_start.JPG)
+
+b. Open a separate clous shell session
+
+![second_cloud_session.JPG](screenshots/second_cloud_session.JPG)
 
  
-* Project running on Azure App Service
+c. Run the below command to test the app.
+```
+chmod +x make_prediction.sh
+./make_prediction.sh
+```
+you will get an output like this.
+![local_test.JPG](screenshots/local_test.JPG)
 
-* Project cloned into Azure Cloud Shell
+ d. swutch the original session and kill the locally running APP using `ctrl + c`
+ 
+### 3. Depoly App in Azure App Service
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+ a. Create an Azure App Service.
+ 
+ ```
+ az webapp up -n ml-ci-cd
+ ```
+ ![webapp_start.JPG](screenshots/webapp_start.JPG)
+ 
+ Once done you will see an App Service is UP and running.
+ ![webapp_status.JPG](screenshots/webapp_status.JPG)
+ 
+ And your webpage should be accessible.
+ ![webpage_output.JPG](screenshots/webpage_output.JPG)
+ 
+ #### Create a Azure Pipeline with Azure DevOps to interconnect Azure and Github
+ 
+ b. Create a Pipeline in [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops&WT.mc_id=udacity_learn-wwl#create-an-azure-devops-project-and-connect-to-azure). Some steps in the this link will differ for our project. I have given the changes in the below steps.
+ 
+ c. While creeating a service connection please select "<b>Python to Linux Web App on Azure</b>" in configuration wizard and select out App from drop down menu.    
+ ![pipeline_configuration.JPG](screenshots/pipeline_configuration.JPG)
+ 
+    once you created the service connection, it will looks like below.
+  ![service_connection.JPG](screenshots/service_connection.JPG)
+   
+ d. In the last step, click save and run.
+ ![pipeline_yaml_script_run.JPG](screenshots/pipeline_yaml_script_run.JPG)
+ 
+ it will take you to your github and make sure you want this pipeline to applied for your current repositiry and click "<b>Approve and Install</b>"
+  ![pipeline_instalaltion_github.JPG](screenshots/pipeline_instalaltion_github.JPG)
+  
+ e. After you install, come back to [Azure Devops portal](dev.azue.com) and check for the Jobs in Pipeline.
+ ![Job Started.JPG](screenshots/Job Started.JPG)
+ 
+  it should complete without any errors like below.
+ ![build_depolyment_completed.JPG](screenshots/build_depolyment_completed.JPG)
 
-* Output of a test run
+d. To check your app status and prediction.
+     - open the file `make_predict_azure_app.sh` in Azure Cli and update your app name in line number 28 and make the script executable.
+   ```
+    chmod +x make_predict_azure_app.sh"
+   ```
+   Here is the prediction from WebAPP.
+  ![webapp_prediction.JPG](screenshots/webapp_prediction.JPG)
+   
+ 
+### 4. Monitor the Logs
+    
+  Run the below command to stream the live logs for your webapp.
+ ```
+  az webapp log tail -n ml-ci-cd
+ ```
+ 
+### 5. Load Test
+  
+  I have used locust to do  load test for our webpp. We will do a load test against the app running locally in your laptop. 
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
+Install locust:
+```
+pip install locust
+```
+Ensure the app is running:
+```
+python app.py
 ```
 
-* Output of streamed log files from deployed application
+Start locust:
+```
+locust
+```
+Open this link [http://localhost:8089](http://localhost:8089). Enter the total number of users to simulate, spawn rate, set the host to localhost:5000, and click Start Swarming:
 
-> 
+![screenshot-locust_main1.png](screenshots/screenshot-locust_main1.png)
+
+You can then watch the load test:
+
+![screenshot-locust.png](screenshots/screenshot-locust.png)
+ 
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+ For testing, Now we have added only main web page, we will work on the schedule and we will create the additional pages and we add more branches in the Github.
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+ I have creaeted a video [Udacity-Build-CI-CD-Pipeline](www.youtube.com) to demonstrate this project step by step.
 
 

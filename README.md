@@ -1,19 +1,36 @@
-# Overview
+# Building CI/CD Pipeline for ML Project
 
-<TODO: complete this with an overview of your project>
+    In this project, we are going to depoly a web app, which is used to predict the house price using Machine Language Model.
+    
+    For this we are using the below tools:
+      - Github (For version control)
+      - Azure Cloud CLI ( For Infrastructure as Code)
+      - Azure App Services (To depoly a webpage in cloud)
+      - Azure DevOps Pipelines (To automate the depoly whenevr there is a commit in Github for source code change)
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+    To track progress of this project, i have used the below tools, which has the clear plan to accomplish it.
+
+    * A [Trello](<link>) board has been created to track the progress, which will help us to know the current status and Progrees of this Project.
+    * I used this [spreadsheet](project-schedule.xlsx) to plan the preparation and deployment with a target date and yearly plan.
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+Below image describes the architecture of this project.
+![architectural-diagram.png](architectural-diagram.png)
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+    To Start with this project, you need an github and Azure account.
+
+    Please follow the below steps to create CI/CD pipeline for ML model in Azure: 
+
+### 1. Clone your repository in Azure CLI.
+
+     Run the below command in Azure CLI to clone youy repository using https link.
+  
+```
+git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
+```
 
 * Project running on Azure App Service
 

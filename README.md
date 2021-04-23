@@ -23,7 +23,7 @@ Below image describes the architecture of this project.
 
    To start with this project, you need an github and Azure account.
 
-   Please follow the below steps to create CI/CD pipeline for ML model in Azure: 
+   Please follow the below steps to create CI/CD pipeline for ML model in Azure: For your reference i have tracked all the CLI commands in `commands.sh` file.
 
 ### 1. Prepare the environment to Azure CLI.
 
@@ -127,7 +127,8 @@ you will get an output like this.
 d. To check your app status and prediction.
      - open the file `make_predict_azure_app.sh` in Azure Cli and update your app name in line number 28 and make the script executable.
    ```
-    chmod +x make_predict_azure_app.sh"
+    chmod +x make_predict_azure_app.sh
+    ./make_predict_azure_app.sh
    ```
    Here is the prediction from WebAPP.
   ![webapp_prediction.JPG](screenshots/webapp_prediction.JPG)
@@ -144,16 +145,16 @@ d. To check your app status and prediction.
   
   I have used locust to do  load test for our webpp. We will do a load test against the app running locally in your laptop. 
 
-Install locust:
+a. Run the below command to install locust:
 ```
 pip install locust
 ```
-Ensure the app is running:
+b. Start the app
 ```
 python app.py
 ```
 
-Start locust:
+c. start locust:
 ```
 locust
 ```

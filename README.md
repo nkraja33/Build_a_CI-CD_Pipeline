@@ -29,9 +29,9 @@ Below image describes the architecture of this project.
 
    Run the below command in Azure CLI to clone youy repository using https link.
   
-    ```
-         git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
-    ```
+```
+git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
+```
 
 * Project running on Azure App Service
 

@@ -21,18 +21,51 @@ In this project, we are going to depoly a web app, which is used to predict the 
 Below image describes the architecture of this project.
 ![architectural-diagram.png](architectural-diagram.png)
 
-   To Start with this project, you need an github and Azure account.
+   To start with this project, you need an github and Azure account.
 
    Please follow the below steps to create CI/CD pipeline for ML model in Azure: 
 
-### 1. Clone your repository in Azure CLI.
+### 1. Prepare the environment to Azure CLI.
 
-   Run the below command in Azure CLI to clone youy repository using https link.
+   a. Run the below command in Azure CLI to clone youy repository using https link. For demo purpose i have used my repositiry.
   
 ```
 git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
 ```
 
+   You will get an output similar to this.
+ ![git_clone.JPG](screenshots/git_clone.JPG) 
+ 
+ b. change to directory cloned from github
+
+```
+cd Build_a_CI-CD_Pipeline
+```
+
+ c. Create a virtual environment to make sure our app runs in a specific version of tools
+ 
+```
+make setup
+```
+
+ d. Activate the virtual environment using the below command.
+
+```
+source ~/.udacity-devops/bin.activate
+```
+
+ e. Install the Dependiencies and run the scaffolding commands.
+
+```
+make all
+```
+
+ if all dependencies were installed and if there is no syntax error in your code you will get an output similar to this.
+![scaffolding.JPG](screenshots/scaffolding.JPG) 
+
+### 2. 
+
+ 
 * Project running on Azure App Service
 
 * Project cloned into Azure Cloud Shell

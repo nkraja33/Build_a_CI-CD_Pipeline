@@ -2,7 +2,7 @@
 
 In this project, we are going to depoly a web app, which is used to predict the house price using Machine Language Model.
     
-   For this we are using the below tools:
+   we are using the below services for this project:
    
         - Github (For version control)
         - Azure Cloud CLI ( For Infrastructure as Code)

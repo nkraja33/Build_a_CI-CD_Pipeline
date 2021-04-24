@@ -1,5 +1,7 @@
 # Building CI/CD Pipeline for ML Project
 
+[![Python application test with Github Actions](https://github.com/nkraja33/Build_a_CI-CD_Pipeline/actions/workflows/python-app.yml/badge.svg)](https://github.com/nkraja33/Build_a_CI-CD_Pipeline/actions/workflows/python-app.yml)
+
 In this project, we are going to depoly a web app, which is used to predict the house price using Machine Language Model.
     
    we are using the below services for this project:
@@ -25,7 +27,7 @@ Below image describes the architecture of this project.
 
    Please follow the below steps to create CI/CD pipeline for ML model in Azure: For your reference i have tracked all the CLI commands in `commands.sh` file.
 
-### 1. Prepare the environment to Azure CLI.
+### 1. Prepare the environment in Azure CLI.
 
    a. Run the below command in Azure CLI to clone youy repository using https link. For demo purpose i have used my repositiry.
   

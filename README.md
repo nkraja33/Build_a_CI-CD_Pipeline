@@ -37,6 +37,7 @@ git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
 
    You will get an output similar to this.
  ![git_clone.JPG](screenshots/git_clone.JPG) 
+
  
  b. change to directory cloned from github
 

@@ -54,7 +54,7 @@ make setup
  d. Activate the virtual environment using the below command.
 
 ```
-source ~/.udacity-devops/bin.activate
+source ~/.udacity-devops/bin/activate
 ```
 
  e. Install the Dependiencies and run the scaffolding commands.

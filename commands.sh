@@ -7,6 +7,7 @@
 
 2. Testing APP Locally in Azure CD_Pipeline
  python app.py
+ cd Build_a_CI-CD_Pipeline
  chmod +x make_prediction.sh
  ./make_prediction.sh
 

@@ -2,7 +2,7 @@
 
 [![Python application test with Github Actions](https://github.com/nkraja33/Build_a_CI-CD_Pipeline/actions/workflows/python-app.yml/badge.svg)](https://github.com/nkraja33/Build_a_CI-CD_Pipeline/actions/workflows/python-app.yml)
 
-In this project, we are going to depoly a web app, which is used to predict the house price using Machine Language Model.
+In this project, we are going to depoly a web app, which is used to predict the Boston house price using Machine Language Model.
     
    we are using the below services for this project:
    
@@ -13,7 +13,7 @@ In this project, we are going to depoly a web app, which is used to predict the 
 
 ## Project Plan
 
-   To track progress of this project, i have used the below tools, which has the clear plan to accomplish it.
+   To track progress of this project, i have used the below tools.
 
    * A [Trello](<link>) board has been created to track the progress, which will help us to know the current status and Progrees of this Project.
    * I used this [spreadsheet](project-schedule.xlsx) to plan the preparation and deployment with a target date and yearly plan.
@@ -39,13 +39,13 @@ git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
  ![git_clone.JPG](screenshots/git_clone.JPG) 
 
  
- b. change to directory cloned from github
+ b. change to the directory cloned from github
 
 ```
 cd Build_a_CI-CD_Pipeline
 ```
 
- c. Create a virtual environment to make sure our app runs in a specific version of tools
+ c. Create a virtual environment to make sure our app runs with a specific version of tools
  
 ```
 make setup
@@ -82,13 +82,14 @@ b. Open a separate clous shell session
  
 c. Run the below command to test the app.
 ```
+cd Build_a_CI-CD_Pipeline
 chmod +x make_prediction.sh
 ./make_prediction.sh
 ```
 you will get an output like this.
 ![local_test.JPG](screenshots/local_test.JPG)
 
- d. swutch the original session and kill the locally running APP using `ctrl + c`
+ d. switch to the original session and kill the locally running APP using `ctrl + c`
  
 ### 3. Depoly App in Azure App Service
 
@@ -163,11 +164,11 @@ locust
 ```
 Open this link [http://localhost:8089](http://localhost:8089). Enter the total number of users to simulate, spawn rate, set the host to localhost:5000, and click Start Swarming:
 
-![screenshot-locust_main1.png](screenshots/screenshot-locust_main1.png)
+![locust_start.JPG](screenshots/locust_start.JPG)
 
 You can then watch the load test:
 
-![screenshot-locust.png](screenshots/screenshot-locust.png)
+![locust_status](screenshots/locust_status.JPG
  
 
 ## Enhancements

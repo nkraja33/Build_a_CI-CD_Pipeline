@@ -87,6 +87,7 @@ chmod +x make_prediction.sh
 ./make_prediction.sh
 ```
 you will get an output like this.
+
 ![local_test.JPG](Screenshots/local_test.JPG)
 
  d. switch to the original session and kill the locally running APP using `ctrl + c`

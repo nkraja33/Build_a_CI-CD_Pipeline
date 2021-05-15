@@ -15,7 +15,7 @@ In this project, we are going to depoly a web app, which is used to predict the 
 
    To track progress of this project, i have used the below tools.
 
-   * A [Trello](<link>) board has been created to track the progress, which will help us to know the current status and Progrees of this Project.
+   * A [Trello](https://trello.com/b/ciPOerLL/build-ci-cdpipeline) board has been created to track the progress, which will help us to know the current status and Progrees of this Project.
    * I used this [spreadsheet](project-schedule.xlsx) to plan the preparation and deployment with a target date and yearly plan.
 
 ## Instructions

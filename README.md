@@ -36,7 +36,7 @@ git clone https://github.com/nkraja33/Build_a_CI-CD_Pipeline.git
 ```
 
    You will get an output similar to this.
- ![git_clone.JPG](screenshots/git_clone.JPG) 
+ ![git_clone.JPG](Screenshots/git_clone.JPG) 
 
  
  b. change to the directory cloned from github
@@ -64,7 +64,7 @@ make all
 ```
 
  if all dependencies were installed and if there is no syntax error in your code you will get an output similar to this.
-![scaffolding.JPG](screenshots/scaffolding.JPG) 
+![scaffolding.JPG](Screenshots/scaffolding.JPG) 
 
 ### 2. Test application locally.
 
@@ -73,11 +73,11 @@ make all
 ```
 python app.py
 ```
-![app_local_start.JPG](screenshots/app_local_start.JPG)
+![app_local_start.JPG](Screenshots/app_local_start.JPG)
 
 b. Open a separate clous shell session
 
-![second_cloud_session.JPG](screenshots/second_cloud_session.JPG)
+![second_cloud_session.JPG](Screenshots/second_cloud_session.JPG)
 
  
 c. Run the below command to test the app.
@@ -87,7 +87,7 @@ chmod +x make_prediction.sh
 ./make_prediction.sh
 ```
 you will get an output like this.
-![local_test.JPG](screenshots/local_test.JPG)
+![local_test.JPG](Screenshots/local_test.JPG)
 
  d. switch to the original session and kill the locally running APP using `ctrl + c`
  
@@ -98,35 +98,35 @@ you will get an output like this.
  ```
  az webapp up -n ml-ci-cd
  ```
- ![webapp_start.JPG](screenshots/webapp_start.JPG)
+ ![webapp_start.JPG](Screenshots/webapp_start.JPG)
  
  Once done you will see an App Service is UP and running.
- ![webapp_status.JPG](screenshots/webapp_status.JPG)
+ ![webapp_status.JPG](Screenshots/webapp_status.JPG)
  
  And your webpage should be accessible.
- ![webpage_output.JPG](screenshots/webpage_output.JPG)
+ ![webpage_output.JPG](Screenshots/webpage_output.JPG)
  
  #### Create a Azure Pipeline with Azure DevOps to interconnect Azure and Github
  
  b. Create a Pipeline in [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops&WT.mc_id=udacity_learn-wwl#create-an-azure-devops-project-and-connect-to-azure). Some steps in the this link will differ for our project. I have given the changes in the below steps.
  
  c. While creeating a service connection please select "<b>Python to Linux Web App on Azure</b>" in configuration wizard and select out App from drop down menu.    
- ![pipeline_configuration.JPG](screenshots/pipeline_configuration.JPG)
+ ![pipeline_configuration.JPG](Screenshots/pipeline_configuration.JPG)
  
     once you created the service connection, it will looks like below.
-  ![service_connection.JPG](screenshots/service_connection.JPG)
+  ![service_connection.JPG](Screenshots/service_connection.JPG)
    
  d. In the last step, click save and run.
- ![pipeline_yaml_script_run.JPG](screenshots/pipeline_yaml_script_run.JPG)
+ ![pipeline_yaml_script_run.JPG](Screenshots/pipeline_yaml_script_run.JPG)
  
  it will take you to your github and make sure you want this pipeline to applied for your current repositiry and click "<b>Approve and Install</b>"
-  ![pipeline_instalaltion_github.JPG](screenshots/pipeline_instalaltion_github.JPG)
+  ![pipeline_instalaltion_github.JPG](Screenshots/pipeline_instalaltion_github.JPG)
   
  e. After you install, come back to [Azure Devops portal](dev.azue.com) and check for the Jobs in Pipeline.
- ![Job Started.JPG](screenshots/Job Started.JPG)
+ ![Job Started.JPG](Screenshots/Job Started.JPG)
  
   it should complete without any errors like below.
- ![build_depolyment_completed.JPG](screenshots/build_depolyment_completed.JPG)
+ ![build_depolyment_completed.JPG](Screenshots/build_depolyment_completed.JPG)
 
 d. To check your app status and prediction.
      - open the file `make_predict_azure_app.sh` in Azure Cli and update your app name in line number 28 and make the script executable.
@@ -135,7 +135,7 @@ d. To check your app status and prediction.
     ./make_predict_azure_app.sh
    ```
    Here is the prediction from WebAPP.
-  ![webapp_prediction.JPG](screenshots/webapp_prediction.JPG)
+  ![webapp_prediction.JPG](Screenshots/webapp_prediction.JPG)
    
  
 ### 4. Monitor the Logs
@@ -164,11 +164,11 @@ locust
 ```
 Open this link [http://localhost:8089](http://localhost:8089). Enter the total number of users to simulate, spawn rate, set the host to localhost:5000, and click Start Swarming:
 
-![locust_start.JPG](screenshots/locust_start.JPG)
+![locust_start.JPG](Screenshots/locust_start.JPG)
 
 You can then watch the load test:
 
-![locust_status](screenshots/locust_status.JPG
+![locust_status](Screenshots/locust_status.JPG)
  
 
 ## Enhancements

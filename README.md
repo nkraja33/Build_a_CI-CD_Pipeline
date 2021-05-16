@@ -3,6 +3,8 @@
 [![Python application test with Github Actions](https://github.com/nkraja33/Build_a_CI-CD_Pipeline/actions/workflows/python-app.yml/badge.svg)](https://github.com/nkraja33/Build_a_CI-CD_Pipeline/actions/workflows/python-app.yml)
 
 In this project, we are going to depoly a web app, which is used to predict the Boston house price using Machine Language Model.
+
+ To start with this project, you need an github and Azure account.
     
    we are using the below services for this project:
    
@@ -22,8 +24,6 @@ In this project, we are going to depoly a web app, which is used to predict the 
 
 Below image describes the architecture of this project.
 ![architectural-diagram.png](architectural-diagram.png)
-
-   To start with this project, you need an github and Azure account.
 
    Please follow the below steps to create CI/CD pipeline for ML model in Azure: For your reference i have tracked all the CLI commands in `commands.sh` file.
 

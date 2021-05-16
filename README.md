@@ -178,6 +178,6 @@ You can then watch the load test:
 
 ## Demo 
 
- I have creaeted a video [Udacity-Build-CI-CD-Pipeline](www.youtube.com) to demonstrate this project step by step.
+ I have creaeted a video [Udacity-Build-CI-CD-Pipeline](https://youtu.be/LUIJodu51rc) to demonstrate this project step by step.
 
 

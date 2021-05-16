@@ -123,7 +123,7 @@ you will get an output like this.
  it will take you to your github and make sure you want this pipeline to applied for your current repositiry and click "<b>Approve and Install</b>"
   ![pipeline_instalaltion_github.JPG](Screenshots/pipeline_instalaltion_github.JPG)
   
- e. After you install, come back to [Azure Devops portal](dev.azure.com) and check for the Jobs in Pipeline.
+ e. After you install, come back to [Azure Devops portal](https://dev.azure.com/) and check for the Jobs in Pipeline.
  ![Job Started.JPG](Screenshots/Job Started.JPG)
  
   it should complete without any errors like below.
